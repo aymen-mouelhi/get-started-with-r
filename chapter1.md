@@ -187,6 +187,7 @@ z
 
 # Notice here that R uses the old value of z on the right side of the equation! This is a very useful feature.
 
+
 # Define the variable myVar and assign the value z times x to it
 
 
@@ -230,7 +231,6 @@ myVar/2
 
 *** =sct
 ```{r}
-check_object('myVar')
 test_output_contains("24",
                      incorrect_msg = "Did you assign the value z times x to myVar?")
 
