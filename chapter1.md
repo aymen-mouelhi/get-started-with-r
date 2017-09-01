@@ -42,6 +42,7 @@ You can also execute R commands straight in the console. This is a good way to e
 
 #Calculate 42 + 88
 42+88
+```
 
 *** =sct
 ```{r}
