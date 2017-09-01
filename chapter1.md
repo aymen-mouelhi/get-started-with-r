@@ -52,3 +52,206 @@ test_output_contains("130",
                      incorrect_msg = "Did you print the sum of `42` and `88`?")
 success_msg("Nice job!")
 ```
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:59b6111ffa
+## Arithmetics
+Arithmetics in R is pretty straight forward (you probably guessed this from the previous examples). The operations have pretty much same signs as the same operations in Excel.
+Study each example presented in the script. Make calculations with pen and paper (or mentally) for examples (f) and (g). Then execute the script and compare the results.
+Notice that for the example (h) you have to write the script.
+
+*** =instructions
+- Add the sum of `8` and `7`.
+- Substruct `4` from `7`.
+- Multiply `4` per `5`.
+- Devide `9` by `3`.
+- Raise `7` to the power of `2`.
+- Devide the sum of `5` and `7` by `3`
+- Raise `3` to the power of the difference between `8` and `6`
+- Multiply `5` by the sum of `6` and `-3`
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+# (a) An addition
+
+
+# (b) A subtraction
+
+
+# (c) A multiplication
+
+
+# (d) A division
+
+
+# (e) An exponentiation
+
+
+# (f) Devide the sum of 5 and 7 by 3
+
+
+# (g) Raise 3 to the power of the difference between 8 and 6
+
+
+# (h) Multiply 5 by the sum of 6 and -3
+
+```
+
+*** =solution
+```{r}
+# (a) An addition
+8+7
+
+# (b) A subtraction
+4-7
+
+# (c) A multiplication
+4*5
+
+# (d) A division
+9/3
+
+# (e) An exponentiation
+7^2
+
+# (f) Devide the sum of 5 and 7 by 3
+(5+7)/3
+
+# (g) Raise 3 to the power of the difference between 8 and 6
+3^(8-6)
+
+# (h) Multiply 5 by the sum of 6 and -3
+5*(6-3)
+```
+
+*** =sct
+```{r}
+test_output_contains("3",
+                     incorrect_msg = "Did you print the sum of `1` and `2`?")
+test_output_contains("130",
+                     incorrect_msg = "Did you print the sum of `42` and `88`?")
+success_msg("Nice job!")
+```
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:9a44f58c0a
+## Variables
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:be86704fa3
+## Data types
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:f0bfb6230f
+## Vectors
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:220118c6eb
+## Factors
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
