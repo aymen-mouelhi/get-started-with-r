@@ -135,17 +135,21 @@ Notice that for the example (h) you have to write the script.
 
 *** =sct
 ```{r}
-test_output_contains("3",
-                     incorrect_msg = "Did you print the sum of `1` and `2`?")
-test_output_contains("130",
-                     incorrect_msg = "Did you print the sum of `42` and `88`?")
+test_output_contains("15",
+                     incorrect_msg = "Did you multiply `5` by the sum of `6` and `-3`?")
 success_msg("Nice job!")
 ```
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:9a44f58c0a
 ## Variables
+A basic concept in (statistical) programming is called a variable. We still have not talked about variables in our course, so without going into too much detail, for the moment think about variables as value holders.
 
+A variable allows you to store a value (e.g. 4) or a set of values in R. You can then later use this variable's name to easily access the value or the object (like a set of values) that is stored within this variable.
+
+You can use the command “=“ to assign values to variables. (Notice that in R there is an alternative and more widespread command “<-” for assignment operation. However, we will stick to “=” in this course).
+
+After creating variables and signing values to them, you can perform arithmetic operations on them (and much more).
 
 *** =instructions
 
@@ -158,19 +162,79 @@ success_msg("Nice job!")
 
 *** =sample_code
 ```{r}
+# Define variable x and assign value 3 to it
+x=3
+
+# Print out the value of x into the console
+x
+
+# Define variable y and assign value 5 to it (you do it!)
+
+
+# Define variable z using variables x and y
+z=x*y
+
+# Print the value out into the console
+z
+
+# Redefine value of variable z
+z=x+y
+z
+
+# Redefine value of z once more
+z=z*2
+z
+
+# Notice here that R uses the old value of z on the right side of the equation! This is a very useful feature.
+
+# Define the variable myVar and assign the value z times x to it
+
+
+# Print out to the console half of the variable myVar
 
 ```
 
 *** =solution
 ```{r}
+# Define variable x and ssign value 3 to it
+x=3
+
+# Print out the value of x into the console
+x
+
+# Define variable y and assign value 5 to it (you do it!)
+y=5
+
+# Define variable z using variables x and y
+z=x*y
+
+# Print the value out into the console
+z
+
+# Redefine value of variable z
+z=x+y
+z
+
+# Redefine value of z once more
+z=z*2
+z
+# Notice here that R uses the old value of z on the right side of the equation! This is a very useful feature.
+
+# Define the variable myVar and assign the value z times x to it
+myVar=z*x
+
+# Print out to the console half of the variable myVar
+myVar/2
 
 ```
 
 *** =sct
 ```{r}
+check_object('myVar')
+test_output_contains("24",
+                     incorrect_msg = "Did you assign the value z times x to myVar?")
 
 ```
-
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:be86704fa3
 ## Data types
