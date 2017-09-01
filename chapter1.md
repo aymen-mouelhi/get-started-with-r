@@ -7,7 +7,12 @@ attachments :
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:df83ae0b97
 ## Welcome
 
-Have a look at the plot that showed up in the viewer to the right. Which type of movie has the worst rating assigned to it?
+Welcome to the short introductory tutorial for R. Here is how this tutorial works.
+In the editor on the right you should type R code to solve the exercises. When you hit the 'Submit Answer' button, every line of code is interpreted and executed by R and you get a message whether or not your code was correct. The output of your R code is shown in the console in the lower right corner.
+
+R makes use of the # sign to add comments, so that you and others can understand what the R code is about. Comments are not run as R code, so they will not influence your result. This is an indispensable feature for documentation. Use it to document what you do (code does) as much as you can.
+
+You can also execute R commands straight in the console. This is a good way to experiment with R code, as your submission is not checked for correctness. There are two ways to do this. 1. Copy lines of code you need to execute from “script.R” field to “R Console” field and hit enter. 2. Highlight lines of code you need to execute in “script.R” and hit command+enter.
 
 *** =instructions
 - Adventure
@@ -20,23 +25,26 @@ Have a look at the plot. Which color does the point with the lowest rating have?
 
 *** =pre_exercise_code
 ```{r}
-# The pre exercise code runs code to initialize the user's workspace.
-# You can use it to load packages, initialize datasets and draw a plot in the viewer
+#Calculate 1 + 2
+1 + 2
 
-movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
+#Calculate 42 + 88
+42+88
 
-library(ggplot2)
-
-ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
+# Notice that R does not care much for spaces before and after operations.
+# Both operations above are executed without any problemes.
 ```
 
-*** =sct
+*** =solution
 ```{r}
-# SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
+#Calculate 1 + 2
+1 + 2
 
-msg_bad <- "That is not correct!"
-msg_success <- "Exactly! There seems to be a very bad action movie in the dataset."
-test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
+#Calculate 42 + 88
+42+88
+
+# Notice that R does not care much for spaces before and after operations.
+# Both operations above are executed without any problemes.
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:1e04993071
@@ -113,5 +121,5 @@ test_error()
 success_msg("Good work!")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:1e04993071
+--- type:NormalExercise lang:r xp:100 skills:1 key:db666a0f54
 ## Variables
