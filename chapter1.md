@@ -57,7 +57,9 @@ success_msg("Nice job!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:59b6111ffa
 ## Arithmetics
 Arithmetics in R is pretty straight forward (you probably guessed this from the previous examples). The operations have pretty much same signs as the same operations in Excel.
+
 Study each example presented in the script. Make calculations with pen and paper (or mentally) for examples (f) and (g). Then execute the script and compare the results.
+
 Notice that for the example (h) you have to write the script.
 
 *** =instructions
@@ -80,25 +82,25 @@ Notice that for the example (h) you have to write the script.
 *** =sample_code
 ```{r}
 # (a) An addition
-
+8+7
 
 # (b) A subtraction
-
+4-7
 
 # (c) A multiplication
-
+4*5
 
 # (d) A division
-
+9/3
 
 # (e) An exponentiation
-
+7^2
 
 # (f) Devide the sum of 5 and 7 by 3
-
+(5+7)/3
 
 # (g) Raise 3 to the power of the difference between 8 and 6
-
+3^(8-6)
 
 # (h) Multiply 5 by the sum of 6 and -3
 
