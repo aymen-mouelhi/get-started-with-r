@@ -23,9 +23,7 @@ Both operations above are executed without any problemes.
 
 *** =pre_exercise_code
 ```{r}
-#Calculate 1 + 2
-
-#Calculate 42 + 88
+# no pec
 
 ```
 
@@ -48,6 +46,9 @@ Both operations above are executed without any problemes.
 
 *** =sct
 ```{r}
-test_error()
-success_msg("Good job! Head over to the next exercise")
+test_output_contains("3",
+                     incorrect_msg = "Did you print the sum of `1` and `2`?")
+test_output_contains("130",
+                     incorrect_msg = "Did you print the sum of `42` and `88`?")
+success_msg("Nice job!")
 ```
