@@ -238,7 +238,17 @@ test_output_contains("24",
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:be86704fa3
 ## Data types
+There are three basic data types in R.
 
+1. numerics - these are values like 3 and 4.123 (Notice that R does not make distinction between integer (i.e. 3) and decimal (i.e. 4.123) values. This is different from Stata as we will see later in the course)
+
+2. characters - these are textual (or string, particularly in Stata) values like “dog” and “cat”. Notice that we wrap these values in quotation marks to tell R what they are. Also keep in mind that R is case sensitive, so value “cat” is different from value “Cat”.
+
+3. logical values - these are Booleans that take only two values TRUE and FALSE.
+
+Notice that each data type calls for different types of operations. Also, R will not be able to handle operations combining data types in senseless manner (e.g. 3 + “cat”).
+
+You can check the type of any variable using class(variable) command.
 
 *** =instructions
 
