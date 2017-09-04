@@ -239,6 +239,7 @@ myVar/2
 
 *** =sct
 ```{r}
+test_object("myVar")
 test_output_contains("24",
                      incorrect_msg = "Did you assign the value z times x to myVar?")
 success_msg("Nice job!")
@@ -330,6 +331,7 @@ b
 
 *** =sct
 ```{r}
+test_error(incorrect_msg = "It seems like you added a numeric variable to a string variable")
 success_msg("Nice job!")
 
 ```

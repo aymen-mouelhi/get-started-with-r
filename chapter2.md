@@ -286,8 +286,7 @@ We can add and remove variables to any data frame (make sure not to try to combi
 
 *** =pre_exercise_code
 ```{r}
-library(data.table)
-library(bit64)
+
 ```
 
 *** =sample_code
