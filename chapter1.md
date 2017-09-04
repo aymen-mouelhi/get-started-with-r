@@ -516,6 +516,7 @@ z
 
 *** =sct
 ```{r}
+test_object("y")
 success_msg("Nice job!")
 
 ```
