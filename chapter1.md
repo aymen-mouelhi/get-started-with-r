@@ -332,6 +332,10 @@ b
 *** =sct
 ```{r}
 test_error(incorrect_msg = "It seems like you added a numeric variable to a string variable")
+test_object("a")
+test_object("b")
+test_output_contains("b",
+    incorrect_msg = "Did you assign the string I love my catto b?")
 success_msg("Nice job!")
 
 ```
