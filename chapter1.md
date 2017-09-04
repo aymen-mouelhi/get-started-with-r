@@ -335,7 +335,7 @@ test_error(incorrect_msg = "It seems like you added a numeric variable to a stri
 test_object("a")
 test_object("b")
 test_function(name= "paste", 
-    not_called_msg = "Did you call the paste function?"
+    not_called_msg = "Did you call the paste function?",
     args_not_specified_msg = "Did you added arguments to the functoin paste?" )
 test_output_contains("I love my cat",
     incorrect_msg = "Did you print the value of b?")
