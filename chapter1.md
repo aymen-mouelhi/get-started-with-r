@@ -281,7 +281,7 @@ y="cat"
 z=FALSE
 
 # Add y to x
-x+y
+#x+y
 
 # Check the type of x
 
