@@ -433,6 +433,8 @@ z[1]=2
 
 *** =sct
 ```{r}
+test_object("y")
+test_object("z")
 success_msg("Nice job!")
 
 ```
