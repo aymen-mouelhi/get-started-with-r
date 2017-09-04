@@ -18,8 +18,6 @@ You can also execute R commands straight in the console. This is a good way to e
 - Calculate the sum of `1` and `2` in the editor on the right.
 - Calculate the sum of `42` and `88` in the editor on the right.
 *** =hint
-Notice that R does not care much for spaces before and after operations.
-Both operations above are executed without any problemes.
 
 *** =pre_exercise_code
 ```{r}
@@ -30,9 +28,13 @@ Both operations above are executed without any problemes.
 *** =sample_code
 ```{r}
 #Calculate 1 + 2
+1 + 2
 
 #Calculate 42 + 88
+42+88
 
+# Notice that R does not care much for spaces before and after operations.
+# Both operations above are executed without any problems.
 ```
 
 *** =solution
@@ -42,6 +44,10 @@ Both operations above are executed without any problemes.
 
 #Calculate 42 + 88
 42+88
+
+# Notice that R does not care much for spaces before and after operations.
+# Both operations above are executed without any problmes.
+
 ```
 
 *** =sct
