@@ -337,7 +337,7 @@ test_object("b")
 test_function(name= "paste", 
     not_called_msg = "Did you call the paste function?",
     args_not_specified_msg = "Did you added arguments to the functoin paste?" )
-test_output_contains("I love my cat",
+test_output_contains("b",
     incorrect_msg = "Did you print the value of b?")
 success_msg("Nice job!")
 
