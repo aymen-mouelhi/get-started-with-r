@@ -286,7 +286,8 @@ We can add and remove variables to any data frame (make sure not to try to combi
 
 *** =pre_exercise_code
 ```{r}
-
+library(data.table)
+library(bit64)
 ```
 
 *** =sample_code
@@ -299,8 +300,7 @@ x=mtcars
 head(x)
 
 # We can also view the whole dataset
-#View(x)
-utils::view(x)
+View(x)
 
 # We can refer to a variable "wt" in data frame "x" as
 x$wt
