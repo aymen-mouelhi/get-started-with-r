@@ -37,7 +37,7 @@ xFactor2
 # Notice that we have not given R the instruction on how to order levels
 # In such a situation R uses numerical order as a default
 
-# Create an ordered factor vector with levels ordered as follows 4<3<5<1<2<6 and print it out into console
+# Create an ordered factor vector xFactor3 with levels ordered as follows 4<3<5<1<2<6 and print it out into console
 
 
 
@@ -84,6 +84,7 @@ rm(list=ls())
 
 *** =sct
 ```{r}
+test_object("xFactor3")
 success_msg("Nice job!")
 ```
 
