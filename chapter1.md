@@ -290,7 +290,7 @@ z=FALSE
 
 
 # Combine variables y and a, as well as "jack"
-paste(y, a, "jack")
+#paste(y, a, "jack")
 
 # Create a new variable b and use paste function to assign to it "I love my cat"
 
