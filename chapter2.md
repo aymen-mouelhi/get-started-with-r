@@ -299,7 +299,7 @@ x=mtcars
 head(x)
 
 # We can also view the whole dataset
-View(x)
+#View(x)
 
 # We can refer to a variable "wt" in data frame "x" as
 x$wt
@@ -328,7 +328,7 @@ x=mtcars
 head(x)
 
 # We can also view the whole dataset
-View(x)
+#View(x)
 
 # We can refer to a variable "wt" in data frame "x" as
 x$wt
