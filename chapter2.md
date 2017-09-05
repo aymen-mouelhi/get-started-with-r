@@ -84,7 +84,7 @@ rm(list=ls())
 
 *** =sct
 ```{r}
-test_object("xFactor3")
+#test_object("xFactor3")
 success_msg("Nice job!")
 ```
 
