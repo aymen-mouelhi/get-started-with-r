@@ -13,7 +13,8 @@ However, before getting into handling variables let’s recall factors.
 Recall that factors handle categorical variables. Previously we’ve seen categories as string values. However, this is not necessary. Categories can also be numerical values.
 
 *** =instructions
-
+- You will need to use “levels” attribute for generating the order
+- If it is not clear how to use levels within factor(), try to call R help by typing help(levels) directly into the console and running it
 *** =hint
 
 *** =pre_exercise_code
@@ -37,7 +38,7 @@ xFactor2
 # Notice that we have not given R the instruction on how to order levels
 # In such a situation R uses numerical order as a default
 
-# Create an ordered factor vector xFactor3 with levels ordered as follows 4<3<5<1<2<6 and print it out into console
+#[DIY] Create an ordered factor vector with levels ordered as follows 4<3<5<1<2<6 and print it out into console
 
 
 
@@ -49,7 +50,6 @@ rm(xFactor2)
 # Sometimes it is useful to clear your workspace (drop all the variables and constructs that you have created).
 # For this purpose you can use
 rm(list=ls())
-
 ```
 
 *** =solution
@@ -68,7 +68,7 @@ xFactor2
 # Notice that we have not given R the instruction on how to order levels
 # In such a situation R uses numerical order as a default
 
-# Create an ordered factor vector with levels ordered as follows 4<3<5<1<2<6 and print it out into console
+#[DIY] Create an ordered factor vector with levels ordered as follows 4<3<5<1<2<6 and print it out into console
 xFactor3=factor(x, ordered=TRUE, levels=c(4,3,5,1,2,6))
 xFactor3
 
@@ -98,8 +98,10 @@ R’s “summary()” function is indispensable in this respect. However, you ha
 One particularly important type of summary is a frequency distribution. Absolute frequency distributions for discrete variables are easily produced by first factoring our variable and then summarizing it.
 
 Notice that R’s useful function “as.factor()”. Using this shortcut we can produce frequency distributions without actually creating a new factor vector.
-*** =instructions
 
+*** =instructions
+- Use function summary() to see various types of output it generates
+- Try to produce the solution to the last [DIY] in one line, remember you can nest the functions
 *** =hint
 
 *** =pre_exercise_code
@@ -118,25 +120,25 @@ summary(x)
 # Create numeric vector (a discrete variable)
 y=c(1,4,3,5,5,4,3,6,3,5,3,5,1,5,1,6,3,4,6)
 
-# Summarize y
+#[DIY] Summarize y
 
 
 # Create Boolian vector
 z=c(FALSE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE)
 
-# Summarize z
+#[DIY] Summarize z
 
 
 # Create a new factor vector by factoring x
 xFactor=factor(x)
 
-# Summarize xFactor
+#[DIY] Summarize xFactor
 
 
 # Summarize a factor of y
 summary(as.factor(y))
 
-# Summarize a factor (produce an absolute frequency distribution) of z
+#[DIY] Summarize a factor (produce an absolute frequency distribution) of z
 
 ```
 
@@ -151,25 +153,25 @@ summary(x)
 # Create numeric vector (a discrete variable)
 y=c(1,4,3,5,5,4,3,6,3,5,3,5,1,5,1,6,3,4,6)
 
-# Summarize y
+#[DIY] Summarize y
 summary(y)
 
 # Create Boolian vector
 z=c(FALSE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE)
 
-# Summarize z
+#[DIY] Summarize z
 summary(z)
 
 # Create a new factor vector by factoring x
 xFactor=factor(x)
 
-# Summarize xFactor
+#[DIY] Summarize xFactor
 summary(xFactor)
 
 # Summarize a factor of y
 summary(as.factor(y))
 
-# Summarize a factor (produce an absolute frequency distribution) of z
+#[DIY] Summarize a factor (produce an absolute frequency distribution) of z
 summary(as.factor(z))
 
 ```
@@ -188,7 +190,8 @@ Plotting frequency distributions in R is very easy, as long as we are concerned 
 We need a bit more care when it comes to continuous (numeric) variables. 
 
 *** =instructions
-
+- Remember to transform your numeric vector into factors
+- Use arrows below the plots to navigate between multiple plots you might have created
 *** =hint
 
 *** =pre_exercise_code
@@ -207,17 +210,17 @@ plot(as.factor(x))
 # Create numeric vector (a discrete variable)
 y=c(1,4,3,5,5,6,3,6,3,5,3,5,1,5,1,6,3,4,6)
 
-# Plot the frequency distribution of y
+#[DIY] Plot the frequency distribution of y
 
 
 # You can use "hist()" function to do the same
 hist(y)
 
-# However, plotting factor of a cariable makes sense only in certain cases
+# However, ploting factor of a cariable makes sense only in certain cases
 # Create a numeric vector of a continuous variable
 z=c(2.1,3,4.2,8,4.1,7,14,13.3,15.2,19.2,5.8,6,4.1,8.9,14.5,16.7,3.1,1.4,2.3,5.1)
 
-# Plot and compare frequency distributions with both "plot(as.factor())" and "hist()" functions
+#[DIY] Plot and compare frequency distributions with both "plot(as.factor())" and "hist()" functions
 
 
 
@@ -240,17 +243,17 @@ plot(as.factor(x))
 # Create numeric vector (a discrete variable)
 y=c(1,4,3,5,5,6,3,6,3,5,3,5,1,5,1,6,3,4,6)
 
-# Plot the frequency distribution of y
+#[DIY] Plot the frequency distribution of y
 plot(as.factor(y))
 
 # You can use "hist()" function to do the same
 hist(y)
 
-# However, plotting factor of a cariable makes sense only in certain cases
+# However, ploting factor of a cariable makes sense only in certain cases
 # Create a numeric vector of a continuous variable
 z=c(2.1,3,4.2,8,4.1,7,14,13.3,15.2,19.2,5.8,6,4.1,8.9,14.5,16.7,3.1,1.4,2.3,5.1)
 
-# Plot and compare frequency distributions with both "plot(as.factor())" and "hist()" functions
+#[DIY] Plot and compare frequency distributions with both "plot(as.factor())" and "hist()" functions
 plot(as.factor(z))
 hist(z)
 
@@ -260,7 +263,6 @@ hist(z, breaks=9)
 
 # Moreover, we can even make bins of varied size if we pass specific break points
 hist(z, breaks=c(0,1,2,3,5,7,10,15,20))
-
 ```
 
 *** =sct
@@ -275,14 +277,16 @@ As you remember (I hope) you cannot store information of different data types in
 
 Fata frame is a central concept in R. This is how we can hold large data sets into the memory of our machines.
 
-Most of the times datasets are very large to examine in its entirety. Therefore, in order to familiarise ourselves with the structure of the data, we can display only first few observations by using “head()” function.
+Most of the times datasets are very large to examine in its entirety. Therefore, in order to familiarize ourselves with the structure of the data, we can display only first few observations by using “head()” function.
 
 Data frame binds together information about different variables. We can call out these separate variables (as vectors) by using “$” sign. Once we have done this, we can handle this variable as a vector (and perform any analysis we have already covered, or will cover in the future).
 
 We can add and remove variables to any data frame (make sure not to try to combine vectors of different length — different number of variables).
 
 *** =instructions
-
+- Notice that our dataset is just a regular object in R. We know how to print out the values contained in the object.
+- Recall that any operation on the vector is performed separately on every component
+- Printing out several observations allows us to see every variable contained in the dataset
 *** =hint
 
 *** =pre_exercise_code
@@ -296,23 +300,26 @@ We can add and remove variables to any data frame (make sure not to try to combi
 # We can create an object to hold our data
 x=mtcars
 
-# We can examine a part of the dataset
+# We can examine a part (several top observations) of the dataset
 head(x)
 
-# We can also view the whole dataset
-#View(x)
+# We can also examine several observations at the bottom of the dataset
+tail(x)
+
+#[DIY] We can also print out the whole data set into the console
+
 
 # We can refer to a variable "wt" in data frame "x" as
 x$wt
 # This gives us a vector that we can manipulate
 
-# Create a vector y whose components are squares of variable wt in dataframe x
+#[DIY] Create a vector y whose components are squares of variable wt in dataframe x
 
 
 # Now we can add this variable y to our data frame
 x$wtSquare=y
 
-# Examine that we have in fact expanded our datafreme by one variable by the use of "head()" function
+#[DIY] Examine that we have in fact expanded our datafreme by one variable by the use of "head()" function
 
 
 # We can also drop some variables from our data frame. For this we have to use "NULL" designation
@@ -325,23 +332,26 @@ x$qsec=NULL
 # We can create an object to hold our data
 x=mtcars
 
-# We can examine a part of the dataset
+# We can examine a part (several top observations) of the dataset
 head(x)
 
-# We can also view the whole dataset
-#View(x)
+# We can also examine several observations at the bottom of the dataset
+tail(x)
+
+#[DIY] We can also print out the whole data set into the console
+x
 
 # We can refer to a variable "wt" in data frame "x" as
 x$wt
 # This gives us a vector that we can manipulate
 
-# Create a vector y whose components are squares of variable wt in dataframe x
+#[DIY] Create a vector y whose components are squares of variable wt in dataframe x
 y=x$wt^2
 
 # Now we can add this variable y to our data frame
 x$wtSquare=y
 
-# Examine that we have in fact expanded our datafreme by one variable by the use of "head()" function
+#[DIY] Examine that we have in fact expanded our datafreme by one variable by the use of "head()" function
 head(x)
 
 # We can also drop some variables from our data frame. For this we have to use "NULL" designation
