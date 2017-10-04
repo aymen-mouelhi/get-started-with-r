@@ -29,6 +29,7 @@ You can also execute R commands straight in the console. This is a good way to e
 
 *** =sample_code
 ```{r}
+
 # Calculate 1 + 2
 1 + 2
 
@@ -44,6 +45,7 @@ You can also execute R commands straight in the console. This is a good way to e
 
 *** =solution
 ```{r}
+
 # Calculate 1 + 2
 1 + 2
 
@@ -55,6 +57,7 @@ You can also execute R commands straight in the console. This is a good way to e
 
 #[DIY] Calculate the sum of 4 and -6
 4-6
+
 ```
 
 *** =sct
