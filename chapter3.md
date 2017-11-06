@@ -168,7 +168,6 @@ Notice that in this case the p-value is 89% which means that we do not find stat
 - Simply change the value of the “alternative” in order to test whether the share of am=0 cars is more than 0.5.
 - What is the conclusion from this test?
 - When testing for the share of the less than 6 cylinder cars, do not forget to first calculate the number of such cars in our dataset, by using table()
--
 
 *** =pre_exercise_code
 ```{r}
@@ -254,8 +253,7 @@ You can also specify the confidence interval (if you want it to be different fro
 *** =instructions
 - Notice how confidence interval widens as you increase your requirement on the prevision of the test - conf.level=0.99.
 - Make sure to say out loud (or write down) the conclusion after every test you perform!
-- Notice that last [DIY] asks you to test for a different variable that previous tasks!
--
+- Notice that last [DIY] asks you to test for a different variable than previous tasks!
 
 *** =pre_exercise_code
 ```{r}
