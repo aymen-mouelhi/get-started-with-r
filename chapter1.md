@@ -1,12 +1,20 @@
 ---
-title       : Introduction to R
-description : Introduction to R
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
+title: 'Introduction to R'
+description: 'Introduction to R'
+attachments:
+    slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf'
+---
 
-
---- type:NormalExercise lang:r xp:100 skills:1 key:9227bbc889
 ## Welcome
+
+```yaml
+type: NormalExercise
+key: 9227bbc889
+lang: r
+xp: 100
+skills: 1
+```
+
 Welcome to the short introductory tutorial for R. Here is how this tutorial works.
 
 In the editor on the right you should type R code to solve the exercises. When you hit the 'Submit Answer' button, every line of code is interpreted and executed by R and you get a message whether or not your code was correct. The output of your R code is shown in the console in the lower right corner.
@@ -17,17 +25,19 @@ Much of the code in all chapters is already filled in. You get the sign of Do It
 
 You can also execute R commands straight in the console. This is a good way to experiment with R code, as your submission is not checked for correctness. There are two ways to do this. 1. Copy lines of code you need to execute from “script.R” field to “R Console” field and hit enter. 2. Highlight lines of code you need to execute in “script.R” and hit command+enter.
 
-*** =instructions
+`@instructions`
 - Type 4 + -6 (or directly 4-6, if you wish).
-*** =hint
 
-*** =pre_exercise_code
+`@hint`
+
+
+`@pre_exercise_code`
 ```{r}
 # no pec
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 
 # Calculate 1 + 2
@@ -43,7 +53,7 @@ You can also execute R commands straight in the console. This is a good way to e
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 
 # Calculate 1 + 2
@@ -60,7 +70,7 @@ You can also execute R commands straight in the console. This is a good way to e
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 test_output_contains("3",
                      incorrect_msg = "Did you calculate the sum of `1` + `2`?")
@@ -71,26 +81,36 @@ test_output_contains("-2",
 success_msg("Nice job!")
 ```
 
+---
 
---- type:NormalExercise lang:r xp:100 skills:1 key:59b6111ffa
 ## Arithmetics
+
+```yaml
+type: NormalExercise
+key: 59b6111ffa
+lang: r
+xp: 100
+skills: 1
+```
+
 Arithmetics in R is pretty straight forward (you probably guessed this from the previous examples). The operations have pretty much same signs as the same operations in Excel.
 
 Study each example presented in the script. Make calculations with pen and paper (or mentally) for examples (f) and (g). Then execute the script and compare the results.
 
 Notice that for the example (h) you have to write the script.
 
-*** =instructions
+`@instructions`
 - Use the multiplication sign *, and backers to write down the correct expression.
 
-*** =hint
+`@hint`
 
-*** =pre_exercise_code
+
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # (a) An addition
 8+7
@@ -117,7 +137,7 @@ Notice that for the example (h) you have to write the script.
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # (a) An addition
 8+7
@@ -144,16 +164,25 @@ Notice that for the example (h) you have to write the script.
 5*(6-3)
 ```
 
-*** =sct
+`@sct`
 ```{r}
 test_output_contains("15",
                      incorrect_msg = "Did you multiply `5` by the sum of `6` and `-3`?")
 success_msg("Nice job!")
 ```
 
+---
 
---- type:NormalExercise lang:r xp:100 skills:1 key:9a44f58c0a
 ## Variables
+
+```yaml
+type: NormalExercise
+key: 9a44f58c0a
+lang: r
+xp: 100
+skills: 1
+```
+
 A basic concept in (statistical) programming is called a variable. We still have not talked about variables in our course, so without going into too much detail, for the moment think about variables as value holders.
 
 A variable allows you to store a value (e.g. 4) or a set of values in R. You can then later use this variable's name to easily access the value or the object (like a set of values) that is stored within this variable.
@@ -162,18 +191,20 @@ You can use the command “=“ to assign values to variables. (Notice that in R
 
 After creating variables and signing values to them, you can perform arithmetic operations on them (and much more).
 
-*** =instructions
+`@instructions`
 - Use the assignment operation =
 - You can specify any operation after the assignment variable. The result of this operation will be assigned to the variable on the left
 - If you specify any operation without assignment, its value will be printed out
-*** =hint
 
-*** =pre_exercise_code
+`@hint`
+
+
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Define variable x and ssign value 3 to it
 x=3
@@ -205,7 +236,7 @@ z
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # Define variable x and ssign value 3 to it
 x=3
@@ -238,7 +269,7 @@ myVar/2
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 test_object("myVar")
 test_output_contains("24",
@@ -247,8 +278,18 @@ success_msg("Nice job!")
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:be86704fa3
+---
+
 ## Data types
+
+```yaml
+type: NormalExercise
+key: be86704fa3
+lang: r
+xp: 100
+skills: 1
+```
+
 There are three basic data types in R.
 
 1. numerics - these are values like 3 and 4.123 (Notice that R does not make distinction between integer (i.e. 3) and decimal (i.e. 4.123) values. This is different from Stata as we will see later in the course)
@@ -261,20 +302,22 @@ Notice that each data type calls for different types of operations. Also, R will
 
 You can check the type of any variable using class(variable) command.
 
-*** =instructions
+`@instructions`
 - type x + y and see the error generated by R
 - Use class() function
 - Do not forget to use quotation marks to tell R that you are defining a string variable
 - Notice that paste() function has to have four arguments in this case, including variables a and y
 - You should know how to print by now :)
-*** =hint
 
-*** =pre_exercise_code
+`@hint`
+
+
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Define a numerical variable x and assign 3
 x=3
@@ -303,7 +346,7 @@ paste(y, a, "jack")
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # Define a numerical variable x and assign 3
 x=3
@@ -332,7 +375,7 @@ b=paste("I", a, "my", y)
 b
 ```
 
-*** =sct
+`@sct`
 ```{r}
 test_error(incorrect_msg = "It seems like you added a numeric variable to a string variable")
 test_object("a")
@@ -346,9 +389,17 @@ success_msg("Nice job!")
 
 ```
 
+---
 
---- type:NormalExercise lang:r xp:100 skills:1 key:f0bfb6230f
 ## Vectors
+
+```yaml
+type: NormalExercise
+key: f0bfb6230f
+lang: r
+xp: 100
+skills: 1
+```
 
 Vectors are very important as they allow us to handle multiple values all at once..
 
@@ -362,18 +413,20 @@ We can call out any component of the vector by referring to it’s index/locatio
 
 In R, applying (mathematical) operations on vectors results into the operation being applied to each component of the vector (rather than to the vector as a whole).
 
-*** =instructions
+`@instructions`
 - Examine closely the vector y, what kinds of values does it hold?
 - Recall that you can use the variable on both sides of the assignment equation
 - You can refer to each component of the vector by specifying its standing in the vector using square brackets.
-*** =hint
 
-*** =pre_exercise_code
+`@hint`
+
+
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Create a numeric vector
 numVector=c(1, 4, 5.7, 7)
@@ -404,7 +457,7 @@ z
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # Create a numeric vector
 numVector=c(1, 4, 5.7, 7)
@@ -435,7 +488,7 @@ z=z/3
 z[1]=2
 ```
 
-*** =sct
+`@sct`
 ```{r}
 test_object("y")
 test_object("z")
@@ -443,9 +496,17 @@ success_msg("Nice job!")
 
 ```
 
+---
 
---- type:NormalExercise lang:r xp:100 skills:1 key:220118c6eb
 ## Factors
+
+```yaml
+type: NormalExercise
+key: 220118c6eb
+lang: r
+xp: 100
+skills: 1
+```
 
 We covered three types of data. However, there is one more important type of data structure in R — a factor. Factors are used to store data about categorical variables.
 
@@ -457,17 +518,19 @@ To create factors in R, you can use factor() function.
 
 Factors in R use another notion of “levels”, which correspond to distinct occurrences (in the example above: Monday, Tuesday, etc.). Levels can be unordered (for example in case of gender there is no particular use for ordering) or ordered (for example in case of educational attainment we know that person who has a master’s degree has studied more than the person who only holds a high school diploma).
 
-*** =instructions
+`@instructions`
 - Make the use of factor() function in order to create a new vector from the string vector
 - Just typing the name of any object in R will instruct the machine to print values this object is holding
-*** =hint
 
-*** =pre_exercise_code
+`@hint`
+
+
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Create a string vector to stor gender of your friends and print out
 x = c("Male", "Female", "Female", "Male", "Male")
@@ -495,7 +558,7 @@ z=eduFactor[1]>eduFactor[3]
 z
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # Create a string vector to stor gender of your friends and print out
 x = c("Male", "Female", "Female", "Male", "Male")
@@ -523,7 +586,7 @@ z=eduFactor[1]>eduFactor[3]
 z
 ```
 
-*** =sct
+`@sct`
 ```{r}
 test_object("y")
 success_msg("Nice job!")

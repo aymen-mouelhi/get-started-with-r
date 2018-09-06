@@ -1,8 +1,17 @@
 ---
-title       : Regression Analysis
-description : Regression Analysis
---- type:NormalExercise lang:r xp:100 skills:1 key:59e698bbd4
+title: 'Regression Analysis'
+description: 'Regression Analysis'
+---
+
 ## Introduction
+
+```yaml
+type: NormalExercise
+key: 59e698bbd4
+lang: r
+xp: 100
+skills: 1
+```
 
 Regression analysis is a workhorse of the inferential statistics. It allows us to take first steps into modelling certain variables by using information available to us.
 
@@ -16,19 +25,20 @@ In this section we will be using mtcars dataset that we have been also using bef
 
 Refresh your memory about the dataset by completing tasks on your right.
 
-
-*** =instructions
+`@instructions`
 - use function head() to display first few observations of the dataset.
 - use function summary() to display summary characteristics of a given variable.
 - do not forget to refer to your dataset in the name of the variable you are interested in.
-*** =hint
 
-*** =pre_exercise_code
+`@hint`
+
+
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 #load data
 a=data.frame(mtcars)
@@ -42,7 +52,7 @@ a=data.frame(mtcars)
 #[DIY] summarize variable "cyl"
 ```
 
-*** =solution
+`@solution`
 ```{r}
 #load data
 a=data.frame(mtcars)
@@ -57,13 +67,22 @@ summary(a$mpg)
 summary(a$cyl)
 ```
 
-*** =sct
+`@sct`
 ```{r}
 success_msg("Nice job!")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:3113397a2a
+---
+
 ## Linear Regression
+
+```yaml
+type: NormalExercise
+key: 3113397a2a
+lang: r
+xp: 100
+skills: 1
+```
 
 The simplest sort of the regression is a linear Ordinary Least Squares (OLS) regression. This is the method that tries to fit the straight line into your two-dimensional scatter plot data such that this line (predicted values) has the lowest possible squared errors compared to actual values (which we observe in our data — hence, supervised learning).
 
@@ -79,17 +98,19 @@ The output specifies coefficients for the fitted line (intercept, and the slope 
 
 We can generate the scatter plot of our data in R. We can, afterwards, fit in the regression line to better visualise the relationship.
 
-*** =instructions
+`@instructions`
 - Notice that you do not need to use a$ in front of your variables in function lm() as you are specifying the dataset to use.
 - Notice that plot() function in R first takes the variable that you want to measure on x-axis, and then the variable to be measured on y-axis. Which is of course different for the regression, where the variable to model always have to go first and will be visualised on y-axis.
-*** =hint
 
-*** =pre_exercise_code
+`@hint`
+
+
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 #load data
 a=data.frame(mtcars)
@@ -113,7 +134,7 @@ abline(model1)
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 #load data
 a=data.frame(mtcars)
@@ -137,13 +158,22 @@ model2 = lm(drat ~ wt, data=a)
 summary(model2)
 ```
 
-*** =sct
+`@sct`
 ```{r}
 success_msg("Nice job!")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:8aa017f043
+---
+
 ## Multivariate Linear Regression
+
+```yaml
+type: NormalExercise
+key: 8aa017f043
+lang: r
+xp: 100
+skills: 1
+```
 
 In previous chapter we have tried to predict the value of one variable by using the information about the other variable.
 
@@ -153,17 +183,19 @@ Multivariate linear regression allows us to do just that. With a simple line of 
 
 Notice that adding independent variables to the regression might change coefficients associated to right-hand-side variables that were already in the model, as well as R-squared of the model. For example, by taking into account the information in variable “wt” together with the information in variable “cyl” to predict variable “mpg” allows us to increase the predictive power of the model from 79% to 83% (see R-square).
 
-*** =instructions
+`@instructions`
 - notice that as we are using several independent variables, visualisation of the regression line on the scatter plot does not make much sense.
 - notice that the p-value of the “cyl” variable also changes if we also include “wt” in the model.
-*** =hint
 
-*** =pre_exercise_code
+`@hint`
+
+
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 #load data
 a=data.frame(mtcars)
@@ -191,7 +223,7 @@ with(a, plot(cyl, mpg))
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 #load data
 a=data.frame(mtcars)
@@ -219,13 +251,22 @@ abline(model2)
 summary(lm(mpg~cyl+qsec+gear+carb, data=a))
 ```
 
-*** =sct
+`@sct`
 ```{r}
 success_msg("Nice job!")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:6b7ee380ea
+---
+
 ## Logistic Regression
+
+```yaml
+type: NormalExercise
+key: 6b7ee380ea
+lang: r
+xp: 100
+skills: 1
+```
 
 Linear regression is a great tool for first steps in exploring the data. However, it might not be the best tool to model certain variables.
 
@@ -235,19 +276,21 @@ Therefore, for modelling share variables we might have to use different approach
 
 The most straight forward of the methods available for these kinds of models is the generalised linear model, which makes sure that values of the predicted variable are confined to the interval between zero and one.
 
-Logistic regression is one of the most widespread applications of the generalised linear models. 
+Logistic regression is one of the most widespread applications of the generalised linear models.
 
-*** =instructions
+`@instructions`
 - compare the outputs of the two models on the right (both modelling mpgShare by use of cyl and wt): the standard linear regression and the logistic regression.
 - notice that logistic regression does not have R-squared statistics. Instead other indicator (AIC) is used to evaluate the goodness of fit.
-*** =hint
 
-*** =pre_exercise_code
+`@hint`
+
+
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 #load data
 a=data.frame(mtcars)
@@ -271,7 +314,7 @@ model2 = glm(mpgShare~cyl+wt,data=a,family=binomial(link="logit"))
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 #load data
 a=data.frame(mtcars)
@@ -295,13 +338,22 @@ model2 = glm(mpgShare~cyl+wt,data=a,family=binomial(link="logit"))
 summary(model2)
 ```
 
-*** =sct
+`@sct`
 ```{r}
 success_msg("Nice job!")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:aeb5a73e17
+---
+
 ## Poisson Regression
+
+```yaml
+type: NormalExercise
+key: aeb5a73e17
+lang: r
+xp: 100
+skills: 1
+```
 
 Linear regression might not be the best tool to model certain (other than shares) types of data. For example, is we are modelling count data (e.g. number of times a consumer has visited a particular website), OLS might predict that this number is -3. This is not possible, clearly.
 
@@ -309,18 +361,20 @@ Other types of generalised linear models take into account of the count nature o
 
 The most widespread of such models are Poisson models. The syntax of this model is similar to that of the logistic model (as both are part of the generalised linear regression model family).
 
-*** =instructions
+`@instructions`
 - compare the output of the two models on the right (both modelling gear by use of mpg): the standard linear regression and the Poisson regression.
 - notice that Poisson regression does not have R-squared statistics. Instead it has AIC similar to the logistic regression.
 - run help(glm) in your RStudio (or right here in DataCamp) and study the displayed documentation carefully. This is a very powerful and simple-to-use family of regression models.
-*** =hint
 
-*** =pre_exercise_code
+`@hint`
+
+
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 #load data
 a=data.frame(mtcars)
@@ -340,7 +394,7 @@ model2 = glm(gear~mpg, data=a, family=poisson(link="log"))
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 #load data
 a=data.frame(mtcars)
@@ -360,7 +414,7 @@ model2 = glm(gear~mpg, data=a, family=poisson(link="log"))
 summary(model2)
 ```
 
-*** =sct
+`@sct`
 ```{r}
 success_msg("Nice job!")
 ```

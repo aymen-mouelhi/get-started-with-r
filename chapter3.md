@@ -1,8 +1,18 @@
 ---
-title       : Hypotheses Testing
-description : Discover Hypotheses Testing
---- type:NormalExercise lang:r xp:100 skills:1 key:b74f291bf2
+title: 'Hypotheses Testing'
+description: 'Discover Hypotheses Testing'
+---
+
 ## Introduction
+
+```yaml
+type: NormalExercise
+key: b74f291bf2
+lang: r
+xp: 100
+skills: 1
+```
+
 In this section we will cover hypothesis testing.
 
 We will cover two types of tests:
@@ -15,17 +25,17 @@ Before going into details let’s load the data from the system.
 
 Recall how to calculate mean and standard error of variables contained in the dataset.
 
-*** =instructions
+`@instructions`
 - You can also use function tail() to visualise a portion of your dataset
 - Do not forget to use $ to refer to a variable in a particular dataset
 - If you do not remember commands for calculating mean or standard deviation in R — Google!
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 #define an object a and assign the data on cars (from the system)
 a=data.frame(mtcars)
@@ -44,7 +54,7 @@ colMeans(a)
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 #define an object a and assign the data on cars (from the system)
 a=data.frame(mtcars)
@@ -62,15 +72,22 @@ sd(a$disp)
 colMeans(a)
 ```
 
-*** =sct
+`@sct`
 ```{r}
 success_msg("Nice job!")
 ```
 
+---
 
-
---- type:NormalExercise lang:r xp:100 skills:1 key:e85395300f
 ## z-test
+
+```yaml
+type: NormalExercise
+key: e85395300f
+lang: r
+xp: 100
+skills: 1
+```
 
 Z-test is a test for the proportions. In other words this is a statistical test that helps us evaluate our beliefs about certain proportions in the population based on the sample at hand.
 
@@ -96,19 +113,20 @@ Most importantly it gives us the p-value of the test.
 
 This value can be understood as the probability that we are making a mistake if we reject our null hypothesis in favour of the alternative one. In this case this probability is 38% which is very high (anything above 10% is high), which would prompt us to conclude that we do not have enough statistical evidence to claim that the share of cars with am=0 was not 50% in the population!
 
-
-*** =instructions
+`@instructions`
 - Use table() function to display the frequency distribution of the desired variable in order to calculate the value of x
 - Test whether the share of cars with the number of cylinders less than 6 is equal to 0.6
 - What is your conclusion about the test on number of cylinders?
-*** =hint
 
-*** =pre_exercise_code
+`@hint`
+
+
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 #define an object a and assign the data on cars (from the system)
 a=data.frame(mtcars)
@@ -126,7 +144,7 @@ binom.test(x=19, n=32, p=0.5)
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 #define an object a and assign the data on cars (from the system)
 a=data.frame(mtcars)
@@ -144,13 +162,22 @@ table(a$cyl)
 binom.test(x=11, n=32, p=0.6)
 ```
 
-*** =sct
+`@sct`
 ```{r}
 success_msg("Nice job!")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:8985b8add6
+---
+
 ## Alternative hypothesis
+
+```yaml
+type: NormalExercise
+key: 8985b8add6
+lang: r
+xp: 100
+skills: 1
+```
 
 In the previous chapter we have not specified the alternative hypothesis. Instead, R automatically performed a two-sided test. This is a default option.
 
@@ -164,17 +191,17 @@ However, if we want to perform a one-sided test checking whether we have any sta
 
 Notice that in this case the p-value is 89% which means that we do not find statistically significant evidence to reject our null hypothesis in favour of the alternative.
 
-*** =instructions
+`@instructions`
 - Simply change the value of the “alternative” in order to test whether the share of am=0 cars is more than 0.5.
 - What is the conclusion from this test?
 - When testing for the share of the less than 6 cylinder cars, do not forget to first calculate the number of such cars in our dataset, by using table()
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 #define an object a and assign the data on cars (from the system)
 a=data.frame(mtcars)
@@ -196,7 +223,7 @@ binom.test(x=19, n=32, p=0.5, alternative="less")
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 #define an object a and assign the data on cars (from the system)
 a=data.frame(mtcars)
@@ -218,14 +245,22 @@ table(a$cyl)
 binom.test(x=11, n=32, p=0.2, alternative="greater")
 ```
 
-*** =sct
+`@sct`
 ```{r}
 success_msg("Nice job!")
 ```
 
+---
 
---- type:NormalExercise lang:r xp:100 skills:1 key:dcb16d6637
 ## t-test
+
+```yaml
+type: NormalExercise
+key: dcb16d6637
+lang: r
+xp: 100
+skills: 1
+```
 
 t-test is the test on the mean of the variable. Using this test we will be able gain information in order to answer questions like:
 
@@ -250,17 +285,17 @@ You can use the same argument of “alternative” to specify the alternative hy
 
 You can also specify the confidence interval (if you want it to be different from 95%, which is the default option).
 
-*** =instructions
+`@instructions`
 - Notice how confidence interval widens as you increase your requirement on the prevision of the test - conf.level=0.99.
 - Make sure to say out loud (or write down) the conclusion after every test you perform!
 - Notice that last [DIY] asks you to test for a different variable than previous tasks!
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 #define an object b and assign the data on characteristics of iris flower (from the system)
 b=data.frame(iris)
@@ -278,7 +313,7 @@ t.test(b$Sepal.Length, mu=5.6, conf.level=0.99)
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 #define an object b and assign the data on characteristics of iris flower (from the system)
 b=data.frame(iris)
@@ -296,15 +331,22 @@ t.test(b$Sepal.Length, mu=5.6, conf.level=0.99)
 t.test(b$Petal.Length, mu=4.3, alternative="less", conf.level=0.9)
 ```
 
-*** =sct
+`@sct`
 ```{r}
 success_msg("Nice job!")
 ```
 
+---
 
-
---- type:NormalExercise lang:r xp:100 skills:1 key:5cbe2ef243
 ## Two sample t-test
+
+```yaml
+type: NormalExercise
+key: 5cbe2ef243
+lang: r
+xp: 100
+skills: 1
+```
 
 t-test can be used to compare characteristics of two independent samples.
 
@@ -318,17 +360,17 @@ In our case we could compare characteristics of two different species of iris. S
 
 We could compare petal length, sepal length, petal width or sepal width.
 
-*** =instructions
+`@instructions`
 - Notice that 2.2e-16 is a very small number. It’s a 0.[15 zeros]22.
 - Notice that we can also use alternative hypothesis and confidence interval arguments in this case
 - Notice that null hypothesis always involves the equality! So, when you are comparing means, the null hypothesis is that means of the two samples are equal to one another
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 #define an object b and assign the data on characteristics of iris flower (from the system)
 b=data.frame(iris)
@@ -344,7 +386,7 @@ t.test(b1$Petal.Length,b2$Petal.Length)
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 #define an object b and assign the data on characteristics of iris flower (from the system)
 b=data.frame(iris)
@@ -360,7 +402,7 @@ t.test(b1$Petal.Length,b2$Petal.Length)
 t.test(b1$Petal.Length,b2$Petal.Length, alternative="greater", conf.level=0.9)
 ```
 
-*** =sct
+`@sct`
 ```{r}
 
 ```

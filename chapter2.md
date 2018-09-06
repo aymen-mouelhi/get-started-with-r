@@ -1,10 +1,17 @@
 ---
-title       : Variables
-description : A step by step guide to Variables
+title: Variables
+description: 'A step by step guide to Variables'
+---
 
-
---- type:NormalExercise lang:r xp:100 skills:1 key:e5aea4ac19
 ## Introduction
+
+```yaml
+type: NormalExercise
+key: e5aea4ac19
+lang: r
+xp: 100
+skills: 1
+```
 
 This section will go through basic functions to handle variables. Toward the end we will also introduce a concept that combines variables together.
 
@@ -12,17 +19,19 @@ However, before getting into handling variables let’s recall factors.
 
 Recall that factors handle categorical variables. Previously we’ve seen categories as string values. However, this is not necessary. Categories can also be numerical values.
 
-*** =instructions
+`@instructions`
 - You will need to use “levels” attribute for generating the order
 - If it is not clear how to use levels within factor(), try to call R help by typing help(levels) directly into the console and running it
-*** =hint
 
-*** =pre_exercise_code
+`@hint`
+
+
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Define a numeric vector x
 x=c(1,4,3,5,2,4,3,6,3,5,3,5,1,5,1,6,3,4,6)
@@ -52,7 +61,7 @@ rm(xFactor2)
 rm(list=ls())
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # Define a numeric vector x
 x=c(1,4,3,5,2,4,3,6,3,5,3,5,1,5,1,6,3,4,6)
@@ -82,14 +91,23 @@ rm(xFactor2)
 rm(list=ls())
 ```
 
-*** =sct
+`@sct`
 ```{r}
 #test_object("xFactor3")
 success_msg("Nice job!")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:499cf8673c
+---
+
 ## Summarizing
+
+```yaml
+type: NormalExercise
+key: 499cf8673c
+lang: r
+xp: 100
+skills: 1
+```
 
 Statistics is routinely dealing with long vectors (variables with lots of observations). Therefore, the first useful thing to do to study your data is to summarize it.
 
@@ -99,17 +117,19 @@ One particularly important type of summary is a frequency distribution. Absolute
 
 Notice that R’s useful function “as.factor()”. Using this shortcut we can produce frequency distributions without actually creating a new factor vector.
 
-*** =instructions
+`@instructions`
 - Use function summary() to see various types of output it generates
 - Try to produce the solution to the last [DIY] in one line, remember you can nest the functions
-*** =hint
 
-*** =pre_exercise_code
+`@hint`
+
+
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Create a string vector
 x=c("cat", "dog", "dog", "rabbit", "dog", "cat", "rabbit")
@@ -142,7 +162,7 @@ summary(as.factor(y))
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # Create a string vector
 x=c("cat", "dog", "dog", "rabbit", "dog", "cat", "rabbit")
@@ -176,30 +196,42 @@ summary(as.factor(z))
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 success_msg("Nice job!")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:e66bff2891
+---
+
 ## Visualization
+
+```yaml
+type: NormalExercise
+key: e66bff2891
+lang: r
+xp: 100
+skills: 1
+```
+
 Humans digest visual information much faster than numeric information. Therefore, sometimes it is desirable to plot the frequency distributions.
 
 Plotting frequency distributions in R is very easy, as long as we are concerned with categorical variables.
 
-We need a bit more care when it comes to continuous (numeric) variables. 
+We need a bit more care when it comes to continuous (numeric) variables.
 
-*** =instructions
+`@instructions`
 - Remember to transform your numeric vector into factors
 - Use arrows below the plots to navigate between multiple plots you might have created
-*** =hint
 
-*** =pre_exercise_code
+`@hint`
+
+
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Create a string vector
 x=c("cat", "dog", "dog", "rabbit", "dog", "cat", "rabbit")
@@ -232,7 +264,7 @@ hist(z, breaks=9)
 hist(z, breaks=c(0,1,2,3,5,7,10,15,20))
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # Create a string vector
 x=c("cat", "dog", "dog", "rabbit", "dog", "cat", "rabbit")
@@ -265,14 +297,24 @@ hist(z, breaks=9)
 hist(z, breaks=c(0,1,2,3,5,7,10,15,20))
 ```
 
-*** =sct
+`@sct`
 ```{r}
 success_msg("Nice job!")
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:df58e8b202
+---
+
 ## Data frames
+
+```yaml
+type: NormalExercise
+key: df58e8b202
+lang: r
+xp: 100
+skills: 1
+```
+
 As you remember (I hope) you cannot store information of different data types in the same vector. However, you can combine vectors holding data of various types into a data frame.
 
 Fata frame is a central concept in R. This is how we can hold large data sets into the memory of our machines.
@@ -283,18 +325,20 @@ Data frame binds together information about different variables. We can call out
 
 We can add and remove variables to any data frame (make sure not to try to combine vectors of different length — different number of variables).
 
-*** =instructions
+`@instructions`
 - Notice that our dataset is just a regular object in R. We know how to print out the values contained in the object.
 - Recall that any operation on the vector is performed separately on every component
 - Printing out several observations allows us to see every variable contained in the dataset
-*** =hint
 
-*** =pre_exercise_code
+`@hint`
+
+
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # R has a number of built in datasets. mtcars is one of them.
 # We can create an object to hold our data
@@ -326,7 +370,7 @@ x$wtSquare=y
 x$qsec=NULL
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # R has a number of built in datasets. mtcars is one of them.
 # We can create an object to hold our data
@@ -358,7 +402,7 @@ head(x)
 x$qsec=NULL
 ```
 
-*** =sct
+`@sct`
 ```{r}
 success_msg("Nice job!")
 
